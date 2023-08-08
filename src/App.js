@@ -1,4 +1,5 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
 import Root from './routes/Root';
 import Rockets from './components/Rockets';
 import Missions from './components/Missions';
@@ -28,9 +29,9 @@ const router = createBrowserRouter([
 ]);
 function App() {
   return (
-    <div className="App">
+    <Container>
       <RouterProvider router={router} />
-    </div>
+    </Container>
   );
 }
 
