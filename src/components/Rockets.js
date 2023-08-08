@@ -1,17 +1,16 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 const Rockets = () => (
-  <>
-    <Container>
-      <Row>
-        <Col>1 of 2</Col>
-        <Col>2 of 2</Col>
-      </Row>
-    </Container>
-  </>
+  <div className="rocket-container">
+    <div className="rocket-itemes">
+      <div className="rocket-item-one">
+        <h1> Image here</h1>
+      </div>
+      <div className="rocket-itemt-two">
+        <h1>description herr</h1>
+      </div>
+    </div>
+  </div>
 );
 
 export default Rockets;

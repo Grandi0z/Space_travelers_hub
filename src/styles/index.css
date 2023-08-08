@@ -53,3 +53,16 @@ code {
   font-size: 1.5rem;
   font-weight: 600;
 }
+
+.rocket-itemes {
+  display: flex;
+  padding: 10px;
+}
+
+.rocket-item-one {
+  width: 30%;
+}
+
+.rocket-item-two {
+  width: 60%;
+}
