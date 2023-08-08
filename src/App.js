@@ -21,12 +21,12 @@ const router = createBrowserRouter([
       },
       {
         path: '/my-profile',
-        element:<MyProfile />
-      }
+        element: <MyProfile />,
+      },
     ],
   },
 
-])
+]);
 function App() {
   return (
     <div className="App">
