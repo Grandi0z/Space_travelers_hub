@@ -1,4 +1,3 @@
-import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Root from './routes/Root';
 import Rockets from './components/Rockets';
