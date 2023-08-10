@@ -30,7 +30,7 @@ code {
   display: flex;
   height: 88px;
   width: 99%;
-  border-bottom: 1px solid gray
+  border-bottom: 1px solid gray;
 }
 
 .header-item {
@@ -40,7 +40,7 @@ code {
 }
 
 .nav {
- padding: 10px;
+  padding: 10px;
 }
 
 .nav-link {
