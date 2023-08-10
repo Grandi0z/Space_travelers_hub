@@ -7,6 +7,7 @@ import {
   joinMission,
   leaveMission,
 } from '../redux/features/mission/missionsSlice';
+import styles from '../styles/missions.module.css';
 
 const Missions = () => {
   const { missions, isLoading, error } = useSelector((store) => store.missions);
@@ -34,13 +35,18 @@ const Missions = () => {
         <tbody>
           {missions.map((mission) => (
             <tr key={mission.mission_id}>
-              <td>{mission.mission_name}</td>
+              <td className={styles.td1}>{mission.mission_name}</td>
               <td>{mission.description}</td>
-              <td>{mission.joined ? 'Active member' : 'NOT A MEMBER'}</td>
-              <td>
+              <td className={styles.td34}>
+                <span className={mission.joined ? styles.activeMember : styles.notAMember}>
+                  {mission.joined ? 'Active member' : 'NOT A MEMBER'}
+                </span>
+              </td>
+              <td className={styles.td34}>
                 {mission.joined && (
                 <Button
-                  variant="outline-secondary"
+                  className={styles.button}
+                  variant="outline-danger"
                   onClick={() => dispatch(leaveMission(mission.mission_id))}
                 >
                   Leave Mission
@@ -48,6 +54,7 @@ const Missions = () => {
                 )}
                 {!mission.joined && (
                 <Button
+                  className={styles.button}
                   variant="outline-secondary"
                   onClick={() => dispatch(joinMission(mission.mission_id))}
                 >

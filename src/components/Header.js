@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import log from '../images/logo.png';
 
 const Header = () => (
@@ -13,13 +13,13 @@ const Header = () => (
     <div className="header-item">
       <ul className="nav justify-content-end">
         <li className="nav-item">
-          <Link className="nav-link" to="/"> Rockets</Link>
+          <NavLink className="nav-link" to="/"> Rockets</NavLink>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/missions">Missions</Link>
+          <NavLink className="nav-link" to="/missions">Missions</NavLink>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/my-profile">My Profile</Link>
+          <NavLink className="nav-link" to="/my-profile">My Profile</NavLink>
         </li>
       </ul>
     </div>
