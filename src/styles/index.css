@@ -67,6 +67,10 @@ code {
   width: 60%;
 }
 
+a.active {
+  text-decoration: underline;
+}
+
 .rocket-container {
   display: flex;
   flex-wrap: wrap;
