@@ -4,12 +4,13 @@ import Root from './routes/Root';
 import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import MyProfile from './components/MyProfile';
+import ErrorPage from './components/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
-    errorElement: <h1>error</h1>,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
