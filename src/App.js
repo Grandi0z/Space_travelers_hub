@@ -3,13 +3,14 @@ import Container from 'react-bootstrap/Container';
 import Root from './routes/Root';
 import Missions from './components/Missions';
 import MyProfile from './components/MyProfile';
+import ErrorPage from './components/ErrorPage';
 import Rockets from './components/RocketsList';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
-
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
