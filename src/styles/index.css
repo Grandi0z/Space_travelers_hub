@@ -30,7 +30,7 @@ code {
   display: flex;
   height: 88px;
   width: 99%;
-  border-bottom: 1px solid gray
+  border-bottom: 1px solid gray;
 }
 
 .header-item {
@@ -40,7 +40,7 @@ code {
 }
 
 .nav {
- padding: 10px;
+  padding: 10px;
 }
 
 .nav-link {
@@ -65,4 +65,52 @@ code {
 
 .rocket-item-two {
   width: 60%;
+}
+
+.rocket-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.rocket-item-image {
+  width: 28%;
+  padding: 10px;
+  justify-content: center;
+}
+
+.rocket-item {
+  width: 70%;
+  padding: 10px;
+}
+
+.rocket-image {
+  width: 15rem;
+  border-radius: 5px;
+}
+
+.rocket-name {
+  font-size: 1.5rem;
+}
+
+button {
+  padding: 6px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.reserve-button {
+  background-color: #007efa;
+  color: #fff;
+}
+
+.cancel-button {
+  background-color: #f3f2f2;
+  outline: auto;
+}
+
+.reserved {
+  background-color: #00a3b7;
 }
