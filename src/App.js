@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Root from './routes/Root';
 import Missions from './components/Missions';
 import MyProfile from './components/MyProfile';
-import Rockets from './components/Rockets';
+import Rockets from './components/RocketsList';
 
 const router = createBrowserRouter([
   {
