@@ -1,74 +1,60 @@
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const rocketUrl = 'https://api.spacexdata.com/v4/rockets';
+const API = 'https://api.spacexdata.com/v3/rockets';
 
-export const rocketList = createAsyncThunk('getRocketList', async (thunkAPI) => {
+const getRockets = createAsyncThunk('rockets/getRockets', async () => {
   try {
-    const response = await axios.get(rocketUrl);
-    console.log(response);
+    const response = await axios.get(API);
     return response.data;
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
+    throw new Error("Couldn't get Rockets data");
   }
 });
 
 const initialState = {
   rockets: [],
-  isLoading: false,
-  error: null,
+  status: 'idle',
+  error: '',
 };
 
-export const rocketsSlice = createSlice({
+const RocketsSlice = createSlice({
   name: 'rockets',
   initialState,
   reducers: {
-    addReserve: (state, action) => {
-      const newRocketState = state.rockets.map((rocket) => {
-        if (rocket.id === action.payload) {
-          return { ...rocket, reserved: true };
-        }
-        return rocket;
-      });
-      state.rockets = newRocketState;
+    reserveRocket: (state, action) => {
+      const rocketId = action.payload;
+      const rockets = state.rockets.map((rocket) => (
+        rocket.id === rocketId
+          ? { ...rocket, reserved: true } : rocket
+      ));
+      state.rockets = rockets;
     },
-    cancelReserve: (state, action) => {
-      const newRocketState = state.rockets.map((rocket) => {
-        if (rocket.id === action.payload) {
-          return { ...rocket, reserved: false };
-        }
-        return rocket;
-      });
-      state.rockets = newRocketState;
+    cancelReservation: (state, action) => {
+      const rocketId = action.payload;
+      const rockets = state.rockets.map((rocket) => (
+        rocket.id === rocketId
+          ? { ...rocket, reserved: false } : rocket
+      ));
+      state.rockets = rockets;
     },
   },
-
-  extraReducers: (builder) => {
+  extraReducers(builder) {
     builder
-      .addCase(rocketList.pending, (state) => {
-        if (state.rockets.length === 0) state.isLoading = true;
+      .addCase(getRockets.fulfilled, (state, action) => {
+        state.status = 'succeed';
+        state.rockets = action.payload;
       })
-      .addCase(rocketList.fulfilled, (state, action) => {
-        if (state.rockets.length === 0) {
-          state.isLoading = false;
-          state.rockets = action.payload.map((rocket) => (
-            {
-              id: rocket.id,
-              name: rocket.name,
-              description: rocket.description,
-              image: rocket.flickr_images[0],
-            }
-          ));
-        }
+      .addCase(getRockets.pending, (state) => {
+        state.status = 'loading';
       })
-      .addCase(rocketList.rejected, (state, action) => {
-        if (state.rockets.length === 0) {
-          state.isLoading = false;
-          state.error = action.payload;
-        }
+      .addCase(getRockets.rejected, (state, action) => {
+        state.status = 'rejected';
+        state.error = action.error.message;
       });
   },
 });
 
-export const { addReserve, cancelReserve } = rocketsSlice.actions;
-export default rocketsSlice.reducer;
+export const { reserveRocket, cancelReservation } = RocketsSlice.actions;
+export { getRockets };
+export default RocketsSlice.reducer;
