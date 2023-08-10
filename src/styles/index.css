@@ -77,6 +77,7 @@ code {
   width: 28%;
   padding: 10px;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .rocket-item {
@@ -99,18 +100,25 @@ button {
   border: none;
   border-radius: 5px;
   font-size: 0.9rem;
+  margin: 10px;
 }
 
 .reserve-button {
   background-color: #007efa;
   color: #fff;
+  display: block;
 }
 
 .cancel-button {
   background-color: #f3f2f2;
   outline: auto;
+  display: block;
+  border: 1px solid gray;
 }
 
 .reserved {
   background-color: #00a3b7;
+  padding: 1px;
+  border-radius: 6px;
+  margin: 5px;
 }
