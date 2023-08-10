@@ -1,0 +1,35 @@
+:root {
+  --darkGrey: #565151;
+  --greenBlue: #1bb987;
+  --light: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.activeMember,
+.notAMember {
+  display: inline-block;
+  color: var(--light);
+  padding: 0.25rem;
+  border-radius: 0.2rem;
+}
+
+.notAMember {
+  background-color: var(--darkGrey);
+}
+
+.activeMember {
+  background: var(--greenBlue);
+}
+
+.td34 {
+  width: 15%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.td1 {
+  width: 14%;
+}
