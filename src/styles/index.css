@@ -70,3 +70,59 @@ code {
 a.active {
   text-decoration: underline;
 }
+
+.rocket-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.rocket-item-image {
+  width: 28%;
+  padding: 10px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.rocket-item {
+  width: 70%;
+  padding: 10px;
+}
+
+.rocket-image {
+  width: 15rem;
+  border-radius: 5px;
+}
+
+.rocket-name {
+  font-size: 1.5rem;
+}
+
+button {
+  padding: 6px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin: 10px;
+}
+
+.reserve-button {
+  background-color: #007efa;
+  color: #fff;
+  display: block;
+}
+
+.cancel-button {
+  background-color: #f3f2f2;
+  outline: auto;
+  display: block;
+  border: 1px solid gray;
+}
+
+.reserved {
+  background-color: #00a3b7;
+  padding: 1px;
+  border-radius: 6px;
+  margin: 5px;
+}

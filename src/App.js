@@ -1,9 +1,9 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Root from './routes/Root';
-import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import MyProfile from './components/MyProfile';
+import Rockets from './components/RocketsList';
 import ErrorPage from './components/ErrorPage';
 
 const router = createBrowserRouter([
