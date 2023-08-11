@@ -126,7 +126,3 @@ button {
   border-radius: 6px;
   margin: 5px;
 }
-
-a.active {
-  text-decoration: underline;
-}
