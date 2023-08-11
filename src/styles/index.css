@@ -127,10 +127,6 @@ button {
   margin: 5px;
 }
 
-a.active {
-  text-decoration: underline;
-}
-
 .my-profile {
   display: flex;
   flex-wrap: wrap;

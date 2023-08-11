@@ -7,7 +7,7 @@ const MyProfile = () => {
   const { rockets } = useSelector((store) => store.rockets);
   const selectJoinedMission = missions.filter((mission) => mission.joined);
   const selectReservedMission = rockets.filter((mission) => mission.reserved);
-  console.log(selectReservedMission);
+
   return (
     <div className="my-profile">
       <div className="my-profile-item">
