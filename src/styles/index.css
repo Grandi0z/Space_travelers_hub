@@ -130,3 +130,13 @@ button {
 a.active {
   text-decoration: underline;
 }
+
+.my-profile {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.my-profile-item {
+  width: 49%;
+  padding: 1rem;
+}
