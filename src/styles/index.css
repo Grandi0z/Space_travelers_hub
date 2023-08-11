@@ -126,3 +126,13 @@ button {
   border-radius: 6px;
   margin: 5px;
 }
+
+.my-profile {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.my-profile-item {
+  width: 49%;
+  padding: 1rem;
+}
