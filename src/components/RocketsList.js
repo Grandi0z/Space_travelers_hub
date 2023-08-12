@@ -1,15 +1,17 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import fetchRockets from './actions';
-import { reserveRocket, cancelReservation } from '../redux/features/rockets/reducers';
+import { reserveRocket, cancelReservation, arrRockets } from '../redux/features/rockets/reducers';
 
 const RocketsList = () => {
   const dispatch = useDispatch();
-  const rockets = useSelector((state) => state.rockets.rockets);
+  const rockets = useSelector(arrRockets);
 
   useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
+    if (!rockets.length) {
+      dispatch(fetchRockets());
+    }
+  }, [dispatch, rockets]);
 /* eslint-disable */
   return (
     <div>
