@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import { useSelector, useDispatch } from 'react-redux';
 import Button from 'react-bootstrap/Button';
@@ -6,21 +6,21 @@ import {
   fetchMissions,
   joinMission,
   leaveMission,
+  arrMissions,
 } from '../redux/features/mission/missionsSlice';
 import styles from '../styles/missions.module.css';
 
 const Missions = () => {
-  const [isFetched, setIsFetched] = useState(false);
-  const { missions, isLoading, error } = useSelector((store) => store.missions);
+  const { isLoading, error } = useSelector((store) => store.missions);
+  const missions = useSelector(arrMissions);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    setIsFetched(true);
-    if (isFetched) {
+    if (!missions.length) {
       dispatch(fetchMissions());
     }
-    return () => setIsFetched(false);
-  }, [dispatch, isFetched]);
+  }, [dispatch, missions]);
+
   let content;
   if (isLoading) {
     content = <div>Is loading...</div>;

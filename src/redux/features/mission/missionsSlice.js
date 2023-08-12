@@ -14,7 +14,6 @@ export const fetchMissions = createAsyncThunk('missions/fetchMissions',
   async (thunkAPI) => {
     try {
       const resp = await axios.get(url);
-      // console.log(resp.data);
       return resp.data;
     } catch (error) {
       return thunkAPI.rejectWithValue('something went wrong');
@@ -62,5 +61,6 @@ const missionsSlice = createSlice({
   },
 });
 
+export const arrMissions = (state) => state.missions.missions;
 export default missionsSlice.reducer;
 export const { joinMission, leaveMission } = missionsSlice.actions;
