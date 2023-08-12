@@ -36,6 +36,8 @@
 
 # 📖 Space Traveler's hub <a name="about-project"></a>
 
+Space Travelers is a web application that allows users to learn about and participate in space exploration. The application retrieves missions and rockets from SpaceX and allows users to join missions and reserve rockets. Users can also create their own profiles and track their progress as they work towards becoming space travelers.
+
 **Space Traveler's hub** 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -149,8 +151,8 @@ You can deploy this project using: GitHub Pages
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **Add a beautiful UI**
-- [ ] **Put calculator and quotes on different pages**
+- [ ] **Add local storage**
+- [ ] **Add a login page for user**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -161,7 +163,7 @@ You can deploy this project using: GitHub Pages
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Grandi0z/Leaderboard/issues).
+Feel free to check the [issues page](https://github.com/Grandi0z/Space_travelers_hub/issues/25).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -182,7 +184,6 @@ thanks to Microverse for providing the necessary resources.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
@@ -196,6 +197,6 @@ thanks to Microverse for providing the necessary resources.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/Grandi0z/Math_magicians/blob/design/LICENSE) licensed.
+This project is [MIT](https://github.com/Grandi0z/Space_travelers_hub/blob/dev/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
