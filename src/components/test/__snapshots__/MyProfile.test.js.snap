@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyProfile should render a table with my rockets 1`] = `
+<div
+  className="my-profile"
+>
+  <div
+    className="my-profile-item"
+  >
+    <h2>
+      My Rockets
+    </h2>
+    0
+  </div>
+  <div
+    className="my-profile-item"
+  >
+    <h2>
+      My Missions
+    </h2>
+    0
+  </div>
+</div>
+`;

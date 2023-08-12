@@ -1,8 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
+import { useRouteError } from 'react-router';
 import ErrorPage from '../ErrorPage';
 
+// Mock the useRouteError hook with jest
 jest.mock('react-router', () => ({
   useRouteError: jest.fn(),
 }));
@@ -14,7 +16,7 @@ describe('ErrorPage', () => {
       statusText: 'Not Found',
       message: 'Resource not found',
     };
-    require('react-router').useRouteError.mockReturnValue(errorMock);
+    useRouteError.mockReturnValue(errorMock);
 
     const { getByText } = render(<ErrorPage />);
 
@@ -27,7 +29,7 @@ describe('ErrorPage', () => {
 
   it('renders default error message if no error provided', () => {
     // Mock the behavior of useRouteError
-    require('react-router').useRouteError.mockReturnValue(null);
+    useRouteError.mockReturnValue(null);
 
     const { getByText } = render(<ErrorPage />);
 

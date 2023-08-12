@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import '@testing-library/jest-dom/extend-expect'; 
+import '@testing-library/jest-dom/extend-expect';
 import Header from '../Header';
 
 describe('Header', () => {
@@ -9,7 +9,7 @@ describe('Header', () => {
     render(
       <MemoryRouter>
         <Header />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
   });
 
@@ -17,7 +17,7 @@ describe('Header', () => {
     const { getByAltText, getByText } = render(
       <MemoryRouter>
         <Header />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
     const logo = getByAltText('logo');
