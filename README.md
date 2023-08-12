@@ -163,7 +163,7 @@ You can deploy this project using: GitHub Pages
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Grandi0z/Space_travelers_hub/issues/25).
+Feel free to check the [issues page](https://github.com/Grandi0z/Space_travelers_hub/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
