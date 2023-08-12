@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions Should match the snapshot 1`] = `
+<div>
+  No mission yet
+</div>
+`;
+
+exports[`Rockets Should match the ro snapshot 1`] = `<div />`;
+
+exports[`Rockets Should match the rocket snapshot 1`] = `<div />`;
